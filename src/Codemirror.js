@@ -4,6 +4,10 @@ const findDOMNode = ReactDOM.findDOMNode;
 const className = require('classnames');
 const debounce = require('lodash.debounce');
 
+require('codemirror/mode/sql/sql');
+require('codemirror/addon/hint/show-hint');
+require('codemirror/addon/hint/sql-hint');
+
 function normalizeLineEndings (str) {
 	if (!str) return str;
 	return str.replace(/\r\n|\r/g, '\n');
